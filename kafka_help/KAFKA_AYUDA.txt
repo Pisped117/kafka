@@ -1,0 +1,26 @@
+Comando para ejecutar zookeeper en windows
+.\zookeeper-server-start.bat ..\..\config\zookeeper.properties
+
+todo ejecutado desde la ruta: C:\kafka_2.13-3.7.1\bin\windows
+
+Comando para ejecutar broker en windows
+.\kafka-server-start.bat ..\..\config\server.properties
+
+Comando para realizar la creacion de un topic
+kafka-topics.bat --create --topic secondTopic --partitions 2 --replication-factor 1 --bootstrap-server localhost:9092
+
+Comando para listar topics
+kafka-topics.bat --list --bootstrap-server localhost:9092
+
+Comando para describir los detalles de un topics
+kafka-topics.bat --describe --topic miTopic --bootstrap-server localhost:9092
+
+Comando para crear un producer
+kafka-console-producer.bat --topic second_topic --bootstrap-server localhost:9092
+
+Comando para crear un consumer
+kafka-console-consumer.bat --topic miTopic --bootstrap-server localhost:9092 --group consumer_1
+
+
+
+
